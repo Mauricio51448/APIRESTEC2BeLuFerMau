@@ -10,11 +10,8 @@ import java.util.List;
 @Data
 public class PublicacionRequestDto {
     private Integer idpublicacion;
-
     private String titulo;
-
     private String resumen;
-
     private Date fechpublicacion;
 
 }
