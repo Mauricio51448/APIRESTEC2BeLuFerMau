@@ -1,12 +1,9 @@
 package pe.edu.cibertec.APIRESTEC2BeLuFerMau.model.bd;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
+
 
 import java.util.Date;
 
@@ -17,14 +14,8 @@ import java.util.Date;
 public class Autor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idAutor;
-
-    private String nomAutor;
-
-    private String apeAutor;
-
-    private Date fechNacAutor;
-
-
-
+    private Integer idautor;
+    private String nomautor;
+    private String apeautor;
+    private Date fechnacautor;
 }

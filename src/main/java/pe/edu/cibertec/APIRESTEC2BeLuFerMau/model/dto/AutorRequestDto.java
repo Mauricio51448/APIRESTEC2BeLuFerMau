@@ -8,11 +8,11 @@ import java.util.List;
 
 @Data
 public class AutorRequestDto {
-    private String nomAutor;
+    private String nomautor;
 
-    private String apeAutor;
+    private String apeautor;
 
-    private Date fechNacAutor;
+    private Date fechnacautor;
 
     private List<PublicacionRequestDto> publicacion = new ArrayList<>();
 
