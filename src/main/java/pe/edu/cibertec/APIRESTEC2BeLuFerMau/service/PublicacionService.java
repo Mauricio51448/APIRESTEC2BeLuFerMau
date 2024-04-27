@@ -9,6 +9,8 @@ import pe.edu.cibertec.APIRESTEC2BeLuFerMau.model.dto.AutorRequestDto;
 import pe.edu.cibertec.APIRESTEC2BeLuFerMau.model.dto.PublicacionRequestDto;
 import pe.edu.cibertec.APIRESTEC2BeLuFerMau.repository.PublicacionRepository;
 
+import java.util.List;
+
 @AllArgsConstructor
 @Service
 public class PublicacionService implements IPublicacionService{
@@ -21,10 +23,15 @@ public class PublicacionService implements IPublicacionService{
         Publicacion publicacion = new Publicacion();
         publicacion.setTitulo(publicacionRequestDto.getTitulo());
         publicacion.setResumen(publicacionRequestDto.getResumen());
-        publicacion.setFechPublicacion(publicacionRequestDto.getFechPublicacion());
+        publicacion.setFechpublicacion(publicacionRequestDto.getFechpublicacion());
         Publicacion nuevaPublicacion = publicacionRepository.save(publicacion);
         Autor autor;
 
         return nuevaPublicacion;
+    }
+
+    @Override
+    public List<Publicacion> listarPublicacion() {
+        return publicacionRepository.findAll();
     }
 }
