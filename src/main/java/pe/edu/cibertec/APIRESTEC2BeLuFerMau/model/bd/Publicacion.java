@@ -1,12 +1,17 @@
-package pe.edu.cibertec.APIRESTEC2BeLuFerMau.model.bd.pk;
+package pe.edu.cibertec.APIRESTEC2BeLuFerMau.model.bd;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
+import pe.edu.cibertec.APIRESTEC2BeLuFerMau.model.bd.Autor;
 
 import java.util.Date;
 
+@NoArgsConstructor
+@Data
+@Entity
+@Table(name = "publicacion")
 public class Publicacion {
 
     @Id
@@ -20,6 +25,7 @@ public class Publicacion {
     private Date fechPublicacion;
 
     @ManyToOne
+    @JoinColumn(name = "idautor")
     private Autor autor;
 
 }
